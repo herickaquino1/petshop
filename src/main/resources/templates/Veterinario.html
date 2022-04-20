@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Veterinario </title>
+		<style type="text/css">
+			form{
+				text-align: center;
+			}
+			fieldset{
+				width: 30%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+
+		<form th:action = "@{/cadastro/veterinario}" method = "POST" th:object = "${Veterinario}">
+		<label for = "VT">Veterinario</label>
+		<fieldset id = "VT">	
+				<p>Nome: <input type="Text" th:field = "*{nome}"></p>
+				<p>CMRV: <input type="text" th:field = "*{crmv}"></p>
+				<p>Especialidade: <input type="text" th:field = "*{especialidade}"></p>
+				<p><input type="submit" value = "enviar"></p>
+		
+		</fieldset>
+		</form>
+
+	</body>
+</html>
